@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Shelf Scan</title>
+</head>
+
+<header class="bg-gray-600 flex max-w-full items-center text justify-center h-24">
+    <h1 class="text-6xl font-bold underline">Shelf Scan</h1>
+</header>
+
+<body>
+    <form class="search-bar flex flex-col justify-center items-center p-2">
+        <div class="basis-full my-2">
+            <input type="text" id="search" class="form-control" placeholder="Search!" required />
+        </div>
+        <div class="basis-full my-2">
+            <select class="form-control" id="Format">
+              <option disabled selected>Select a Format Preference</option>
+              <option>popular</option>
+              <option>Action</option>
+              <option>Adventure</option>
+              <option>Sci-fi</option>
+              <option>Mystery</option>
+              <option>Horror</option>
+              <option>Fantasy</option>
+              <option>Romance</option>
+              <option>History</option>
+              <option>Biography</option>
+              <option>Informative</option>
+            </select>
+          </div>
+          <div id="results">
+
+          </div>
+    </form>
+</body>
+
+
+
+</html>
