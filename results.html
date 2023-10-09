@@ -15,12 +15,12 @@
 </header>
 
 <body>
-    <form class="search-bar flex flex-col justify-center items-center p-2">
-        <div class="basis-full my-2">
-            <input type="text" id="search" class="form-control" placeholder="Search!" required />
+    <form class="search-bar flex flex-col justify-center items-center my-2 mx-6 border-solid border-2 border-black rounded-md text-2xl">
+        <div class="basis-full my-2 border-solid border-2 border-black w-5/6">
+            <input type="text" id="search" class="form-control w-full px-2" placeholder="Book Titles" required />
         </div>
-        <div class="basis-full my-2">
-            <select class="form-control" id="Format">
+        <div class="basis-full my-2 w-5/6">
+            <select class="form-control border-solid border-2 border-black w-full text-center" id="Format">
               <option disabled selected>Select a Format Preference</option>
               <option>popular</option>
               <option>Action</option>
@@ -35,10 +35,13 @@
               <option>Informative</option>
             </select>
           </div>
-          <div id="results">
-
+          <div class="basis-full my-2 w-5/6">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-1 px-4 rounded w-full">Search</button>
           </div>
     </form>
+        <div id="results">
+
+        </div>
 </body>
 
 
