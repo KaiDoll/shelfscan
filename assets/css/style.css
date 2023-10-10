@@ -1,8 +1,26 @@
+body {
+    background: rgb(234,224,204);
+    background: linear-gradient(90deg, rgba(234,224,204,1) 0%, rgba(201,173,161,1) 25%, rgba(160,160,131,1) 50%, rgba(121,132,120,1) 75%, rgba(77,106,109,1) 100%);
+}
 
-======
+.text-3xl {
+    font-size: 70px;
+    color: white;
+    text-decoration:wavy;
+    border: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    width: 380px;
+}
+
+.bg-white {
+    background-image: url(bookshelf.jpg);
+    
+}
+
+
 /* .search-button {
     font-weight: bold;
     font-size: 40px;
     align-items: left;
 } */
->>>>>>> 828a04f8948bb4967f5e488bcec8e03adda4f98a
