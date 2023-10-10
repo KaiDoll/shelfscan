@@ -1,6 +1,8 @@
 var modal = document.getElementById("authentication-modal");
 var openBtn = document.getElementById("open-btn");
 var closeBtn = document.getElementById("close-btn");
+var searchBooksForm = document.querySelector('#search-books');
+
 // var searchButton = document.getElementById("search-btn");//future use
 openBtn.onclick = function () {
   modal.style.display = "block";
