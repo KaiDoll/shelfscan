@@ -4,18 +4,23 @@ body {
 }
 
 .text-3xl {
-    font-size: 70px;
+    font-size: 50px;
     color: white;
     text-decoration:wavy;
     border: 10px;
     border-style: solid;
-    border-radius: 10px;
-    width: 380px;
+    border-radius: 50%;
+    border-color: #c9ada1;
+    width: 450px;
+    height: 70px;
+    background-color: #c9ada1;
+    position: absolute;
 }
 
 .bg-white {
     background-image: url(bookshelf.jpg);
-    
+    position: relative;
+    height: 120px;
 }
 
 
