@@ -1,38 +1,48 @@
-var url = 'https://www.googleapis.com/books/v1/volumes?q=murder'
-var search = localStorage.getItem('key')
-var results = document.getElementById('results')
+var url = 'https://www.googleapis.com/books/v1/volumes?q='
+var books = localStorage.getItem('books');
+var genre = localStorage.getItem('genre');
+var results = document.getElementById('results');
 
 //     fetch('https://api.nytimes.com/svc/books/v3/reviews.json?title=Othello-key=bR4y42iA1GzK1cKSkAc2M2cUAGpDbTrJ')
 //   .then(response => { return response.json(); })
 //   .then(json => { console.log(json); });
 
 
-fetch(url + search)
+fetch(url + genre + '+' + books)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
+        console.log(data);
         for(var i = 0; i < 10; i++) {
-            var article = document.createElement('section').classList.add('flex flex-col my-2 mx-6 border-solid border-2 border-black rounded-md');
-            var author = document.createElement('p').classList.add('my-1 w-5/6');
-            var discription = document.createElement('p').classList.add('my-1 w-5/6');
-            var title = document.createElement('p').classList.add('my-1 w-5/6');
-            var link = document.createElement('a').classList.add('my-1 w-5/6');
-            var cover = document.createElement('img').classList.add('my-1 w-1/6');
+            var article = document.createElement('section')
+            var author = document.createElement('p')
+            var discription = document.createElement('p')
+            var title = document.createElement('p')
+            var link = document.createElement('a')
+            var cover = document.createElement('img')
 
-            article.setAttribute("id","articleBox" + i);
 
-            author.textContent = data[i].authors;
-            discription.textContent = data[i].description;
-            title.textContent = data[i].title;
-            link.textContent = data[i].infolink;
+            article.classList.add('flex', 'flex-row', 'my-2', 'mx-6' ,'border-solid' ,'border-2' ,'border-black' ,'rounded-md');
+            author.classList.add('my-1', 'w-5/6');
+            discription.classList.add('my-1', 'w-5/6');
+            title.classList.add('my-1', 'w-1/6');
+            link.classList.add('my-1', 'w-5/6');
+            cover.classList.add('my-1', 'w-1/6');
+
+            // article.setAttribute('id', "articleBox");
+            console.log(data.items[i].volumeInfo.infoLink)
+            author.textContent = data.items[i].volumeInfo.authors[0];
+            discription.textContent = data.items[i].volumeInfo.description;
+            title.textContent = data.items[i].volumeInfo.title;
+            link.textContent = data.items[i].volumeInfo.infoLink;
 
             results.append(article);
-            cover.append('articleBox' + i);
-            title.append('articleBox' + i);
-            author.append('articleBox' + i);
-            discription.append('articleBox' + i);
-            link.append('articleBox' + i);
+            // article.append(cover);
+            article.append(title);
+            article.append(author);
+            article.append(discription);
+            article.append(link);
         }
     });
 
