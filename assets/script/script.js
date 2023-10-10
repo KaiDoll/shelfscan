@@ -30,7 +30,7 @@ function secondPage() {
   window.location.href = 'results.html';
   console.log('bye');
 };
-console.log(searchBtn)
+
 searchBtn.addEventListener("click", function() {
 passValues();
 secondPage(); 
