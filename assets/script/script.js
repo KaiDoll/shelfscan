@@ -23,7 +23,6 @@ function passValues() {
   var formatInput =document.getElementById('format-input').value;
   localStorage.setItem('books', searchInput);
   localStorage.setItem('genre', formatInput)
-  secondPage(); 
 }
 
 function secondPage() {
@@ -32,6 +31,8 @@ function secondPage() {
 };
 
 searchBtn.addEventListener("click", function() {
+  event.preventDefault();
+  
 passValues();
 secondPage(); 
 });
