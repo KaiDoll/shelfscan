@@ -5,7 +5,6 @@ var results = document.getElementById('results');
 
 // 
 
-
 fetch(url + genre + '+' + books)
     .then(function (response) {
       return response.json();
