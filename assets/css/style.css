@@ -23,6 +23,9 @@ body {
     height: 120px;
 }
 
+a{
+    color: brown;
+}
 
 /* .search-button {
     font-weight: bold;
