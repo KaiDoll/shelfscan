@@ -18,7 +18,7 @@ body {
 }
 
 .bg-white {
-    background-image: url(bookshelf.jpg);
+    background-image: url(../images/bookshelf.jpg);
     position: relative;
     height: 120px;
 }
