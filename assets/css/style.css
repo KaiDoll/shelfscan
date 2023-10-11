@@ -23,10 +23,17 @@ body {
     height: 120px;
 }
 
-a{
-    color: brown;
+.article-text{
+    font-family: 'Pridi', serif;
 }
 
+#headtext{
+    font-family: 'Alegreya', serif;
+}
+
+#form-text{
+    font-family: 'Della Respira', serif;
+}
 /* .search-button {
     font-weight: bold;
     font-size: 40px;
