@@ -4,16 +4,13 @@ var genre = localStorage.getItem('genre');
 var results = document.getElementById('results');
 var search = document.getElementById('search-input')
 
-//     fetch('https://api.nytimes.com/svc/books/v3/reviews.json?title=Othello-key=bR4y42iA1GzK1cKSkAc2M2cUAGpDbTrJ')
-//   .then(response => { return response.json(); })
-//   .then(json => { console.log(json); });
-
 fetch(url + genre + '+' + books)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
         console.log(data);
+
         for(var i = 0; i < 10; i++) {
             var article = document.createElement('section');
             var cover = document.createElement('img');
@@ -50,7 +47,7 @@ fetch(url + genre + '+' + books)
             right.append('Summary: ' , discription);
             right.append('For more information: ' , linktext);
         }
-    });
+    // });
 
 function passValues() {
     var searchInput = document.getElementById("search-input").value;
