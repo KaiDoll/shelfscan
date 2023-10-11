@@ -1,37 +1,50 @@
-var url = 'https://www.googleapis.com/books/v1/volumes?q=murder'
-var search = localStorage.getItem('key')
-var results = document.getElementById('results')
+var url = 'https://www.googleapis.com/books/v1/volumes?q='
+var books = localStorage.getItem('books');
+var genre = localStorage.getItem('genre');
+var results = document.getElementById('results');
 
 // 
 
+fetch(url + genre + '+' + books)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
 
-
-// fetch(url + search)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
         for(var i = 0; i < 10; i++) {
-            var article = document.createElement('section').classList.add('flex flex-col my-2 mx-6 border-solid border-2 border-black rounded-md');
-            var author = document.createElement('p').classList.add('my-1 w-5/6');
-            var discription = document.createElement('p').classList.add('my-1 w-5/6');
-            var title = document.createElement('p').classList.add('my-1 w-5/6');
-            var link = document.createElement('a').classList.add('my-1 w-5/6');
-            var cover = document.createElement('img').classList.add('my-1 w-1/6');
+            var article = document.createElement('section');
+            var cover = document.createElement('img');
+            var title = document.createElement('p');
+            var left = document.createElement('section');
+            var author = document.createElement('p');
+            var discription = document.createElement('p');
+            var link = document.createElement('a');
+            var right = document.createElement('section');
 
-            article.setAttribute("id","articleBox" + i);
+            left.classList.add('flex', 'flex-col', 'w-2/6', 'px-1')
+            right.classList.add('flex', 'flex-col', 'w-4/6')
+            article.classList.add('flex', 'flex-row', 'my-2', 'mx-6' ,'border-solid' ,'border-2' ,'border-black' ,'rounded-md');
+            author.classList.add('my-1');
+            discription.classList.add('my-1');
+            title.classList.add('my-1');
+            link.classList.add('my-1');
+            cover.classList.add('my-1');
 
-            author.textContent = data[i].authors;
-            discription.textContent = data[i].description;
-            title.textContent = data[i].title;
-            link.textContent = data[i].infolink;
+            console.log(data.items[i].volumeInfo.infoLink)
+            author.textContent = data.items[i].volumeInfo.authors[0];
+            discription.textContent = data.items[i].volumeInfo.description;
+            title.textContent = data.items[i].volumeInfo.title;
+            link.textContent = data.items[i].volumeInfo.infoLink;
 
             results.append(article);
-            cover.append('articleBox' + i);
-            title.append('articleBox' + i);
-            author.append('articleBox' + i);
-            discription.append('articleBox' + i);
-            link.append('articleBox' + i);
+            article.append(left);
+            article.append(right);
+            // left.append(cover);
+            left.append(title);
+            right.append(author);
+            right.append(discription);
+            right.append(link);
         }
     // });
 

@@ -20,35 +20,15 @@ window.onclick = function (event) {
   }
 };
 
-function passValues() {
-  localStorage.setItem("books", searchInput);
-  localStorage.setItem("genre", formatInput);
-  secondPage();
-}
+  var searchInput = document.getElementById("search-input").value;
+  var formatInput =document.getElementById('format-input').value;
+  localStorage.setItem('books', searchInput);
+  localStorage.setItem('genre', formatInput)
 
 function secondPage() {
   window.location.href = "results.html";
   console.log("bye");
 }
-
-var url = "https://www.googleapis.com/books/v1/volumes?q=";
-searchBtn.addEventListener("submit", function (event) {
-  event.preventDefault()
-  var searchInput = document.getElementById("search-input").value;
-  var formatInput = document.getElementById("format-input").value;
-  console.log(searchInput, formatInput);
-  // passValues();
-  // secondPage();
-  fetch(url + formatInput + "+" + searchInput) //fetch is working 
-  .then(function (response) {
-    console.log(response);
-    return response.json();  
-  })
-  .then(function (data) {
-console.log(data);
-  localStorage.setItem('data', JSON.stringify(data.items));
-  window.location.href = "results.html";
-  });
 });
 // added prevent default so it does not refresh.
 
