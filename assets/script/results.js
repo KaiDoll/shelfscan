@@ -47,7 +47,7 @@ fetch(url + genre + '+' + books)
             right.append('Summary: ' , discription);
             right.append('For more information: ' , linktext);
         }
-    // });
+    });
 
 function passValues() {
     var searchInput = document.getElementById("search-input").value;

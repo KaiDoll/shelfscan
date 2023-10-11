@@ -29,7 +29,7 @@ function secondPage() {
   window.location.href = "results.html";
   console.log("bye");
 }
-});
+// });
 // added prevent default so it does not refresh.
 
 var books = localStorage.getItem("books");
