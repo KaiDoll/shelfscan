@@ -8,14 +8,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Shelf Scan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Adamina&family=Alegreya&family=David+Libre&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Adamina&family=Alegreya&family=David+Libre&family=Della+Respira&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Adamina&family=Alegreya&family=David+Libre&family=Della+Respira&family=Pridi&display=swap" rel="stylesheet">
 </head>
 
 <header class="bg-white py-6 sm:py-8">
-    <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Shelf Scan</h1>
+    <h1 id="headtext" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Shelf Scan</h1>
 </header>
 
 <body>
-    <form class="search-bar flex flex-col justify-center items-center my-2 mx-6 border-solid border-2 border-black rounded-md text-2xl">
+    <form id="form-text" class="search-bar flex flex-col justify-center items-center my-2 mx-6 border-solid border-2 border-black rounded-md text-2xl">
         <div class="basis-full my-2 border-solid border-2 border-black w-5/6">
             <input type="text" id="search-input" class="form-control w-full px-2" placeholder="Book Titles" required />
         </div>
