@@ -2,7 +2,8 @@
 
 Shelf Scan!
 
-![Webpage1](./assets/)
+![Webpage1](assets/images/frontpage.png)
+![Webpage1](assets/images/frontpage1.png)
 ![Webpage2](./assets/images/Webpage2.PNG)
 
 ## Description:

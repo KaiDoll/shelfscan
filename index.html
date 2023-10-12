@@ -13,24 +13,26 @@
           }
         }
       </style>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Adamina&family=Alegreya&family=David+Libre&display=swap" rel="stylesheet">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Adamina&family=Alegreya&family=David+Libre&family=Della+Respira&display=swap" rel="stylesheet">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Adamina&family=Alegreya&family=David+Libre&family=Della+Respira&family=Pridi&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header class="bg-white py-6 sm:py-8">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Shelf Scan</h1>
-        <!-- <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded absolute right-8">
-          Search for Books!
-        </button> -->
-        <!-- Modal toggle -->
-<button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 absolute right-8" type="button" id="open-btn">
+        <h1 id="headtext" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Shelf Scan</h1>
+<button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 absolute right-8 article-text" type="button" id="open-btn">
   Search for Books!
 </button>
 
-<!-- Main modal -->
 <div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <!-- <div class="fixed w-screen max-w-md max-h-full"> -->
-        <!-- Modal content -->
         <div class="absolute inset-0 h-screen flex justify-center items-center">
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 w-11/12">
             <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal" id="close-btn">
@@ -42,18 +44,16 @@
             <div class="px-6 py-6 lg:px-8">
                 
               <div class="mb-3">
-                <!-- <div class="relative mb-4 flex w-full flex-wrap items-stretch"> -->
-                <form class= "search-books relative mb-4 flex w-full flex-wrap items-stretch" id="search-btn">
+                <form class= "search-books relative mb-4 flex w-full flex-wrap items-stretch">
                   <input id ="search-input"
                     type="search"
                     class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
                     placeholder="Book Titles"
                     aria-label="Search"
                     aria-describedby="button-addon2" />
-              
-                  <!--Search icon-->
-                  <button
-                    class="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200" type="submit"
+      
+                  <button id="search-btn"
+                    class="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
                     >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@
                     </svg>
                   </button>
                   <div class="basis-full my-2 w-5/6">
-                    <select id="format-input" class="form-control border-solid border-2 border-black w-full text-center" id="Format">
+                    <select id="format-input" class="form-control border-solid border-2 border-black w-full text-center article-text" id="Format">
                       <option disabled selected>Select a Format Preference</option>
                       <option>Popular</option>
                       <option>Action</option>
@@ -84,106 +84,22 @@
                   </form>
                   
                 </div>
-              </div>
-                    
-                   
-
-                
-                
-                
+              </div>               
             </div>
         </div>
     </div>
 </div> 
-        <!-- <div class="mx-auto max-w-2xl lg:mx-0"> -->
         </header>
+        <h1 class ="p-2 text-5xl text-center article-text" id="h1-text">Top 3 Best Selling Books</h1>
         
-      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 gap-y-8 pt-2 sm:mt-8 sm:pt-8 lg:mx-8 lg:max-w-none lg:grid-cols-3">
-        <article class="flex max-w-xl flex-col items-start justify-between">
-          <div class="flex items-center gap-x-4 text-xs">
-            <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
-            <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
-          </div>
-          <div class="group relative">
-            <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-              <a href="#">
-                <span class="absolute inset-0"></span>
-                THIS IS A PLACEHOLDER
-              </a>
-            </h3>
-            <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
-          </div>
-          <div class="relative mt-8 flex items-center gap-x-4">
-            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-50">
-            <div class="text-sm leading-6">
-              <p class="font-semibold text-gray-900">
-                <a href="#">
-                  <span class="absolute inset-0"></span>
-                  Michael Foster
-                </a>
-              </p>
-              <p class="text-gray-600">Co-Founder / CTO</p>
-            </div>
-          </div>
-        </article>
-        <article class="flex max-w-xl flex-col items-start justify-between">
-          <div class="flex items-center gap-x-4 text-xs">
-            <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
-            <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
-          </div>
-          <div class="group relative">
-            <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-              <a href="#">
-                <span class="absolute inset-0"></span>
-                THIS IS A PLACEHOLDER
-              </a>
-            </h3>
-            <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
-          </div>
-          <div class="relative mt-8 flex items-center gap-x-4">
-            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-50">
-            <div class="text-sm leading-6">
-              <p class="font-semibold text-gray-900">
-                <a href="#">
-                  <span class="absolute inset-0"></span>
-                  Michael Foster
-                </a>
-              </p>
-              <p class="text-gray-600">Co-Founder / CTO</p>
-            </div>
-          </div>
-        </article>
-        <article class="flex max-w-xl flex-col items-start justify-between">
-          <div class="flex items-center gap-x-4 text-xs">
-            <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
-            <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
-          </div>
-          <div class="group relative">
-            <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-              <a href="#">
-                <span class="absolute inset-0"></span>
-                THIS IS A PLACEHOLDER
-              </a>
-            </h3>
-            <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
-          </div>
-          <div class="relative mt-8 flex items-center gap-x-4">
-            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-50">
-            <div class="text-sm leading-6">
-              <p class="font-semibold text-gray-900">
-                <a href="#">
-                  <span class="absolute inset-0"></span>
-                  Michael Foster
-                </a>
-              </p>
-              <p class="text-gray-600">Co-Founder / CTO</p>
-            </div>
-          </div>
-        </article>
-        <!-- More posts... -->
-      </div>
-    </div>
-
+<div class="mx-4 px-4 grid grid-cols-2 md:grid-cols-3 gap-4 flex justify-center">
+  <div id="top-shelf1">
+  </div>
+  <div id="top-shelf2">
+  </div>
+  <div id="top-shelf3">
+  </div>
+</div>
 <script src="./assets/script/script.js"></script>
 </body>
 </html>

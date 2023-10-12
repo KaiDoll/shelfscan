@@ -10,7 +10,6 @@ fetch(url + genre + '+' + books)
     })
     .then(function (data) {
         console.log(data);
-
         for(var i = 0; i < 10; i++) {
             var article = document.createElement('section');
             var cover = document.createElement('img');

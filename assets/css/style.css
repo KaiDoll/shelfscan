@@ -34,6 +34,17 @@ body {
 #form-text{
     font-family: 'Della Respira', serif;
 }
+
+#h1-text{
+    font-family: 'Della Respira', serif;
+}
+
+
+#search-input{
+    font-family: 'Pridi', serif;
+    color: white;
+}
+
 /* .search-button {
     font-weight: bold;
     font-size: 40px;
