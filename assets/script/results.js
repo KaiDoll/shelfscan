@@ -22,7 +22,7 @@ fetch(url + genre + '+' + books)
 
             left.classList.add('flex', 'flex-col', 'w-2/6', 'px-1')
             right.classList.add('flex', 'flex-col', 'w-4/6')
-            article.classList.add('flex', 'flex-row', 'my-2', 'mx-6' ,'border-solid' ,'border-2' ,'border-black' ,'rounded-md');
+            article.classList.add('flex', 'flex-row', 'my-2', 'mx-6' ,'border-solid' ,'border-2' ,'border-black' ,'rounded-md', 'article-text');
             author.classList.add('my-1');
             discription.classList.add('my-1');
             title.classList.add('my-1');
