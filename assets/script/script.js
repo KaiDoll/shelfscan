@@ -8,13 +8,11 @@ var nyUrl =
 var url = "https://www.googleapis.com/books/v1/volumes?q=";
 var nyApiKey = "bR4y42iA1GzK1cKSkAc2M2cUAGpDbTrJ";
 var googleApiKey = "&key=AIzaSyCyaIcjiZ4WlpOaAKDLJVj04ytizEMCQYw";
-// var topSellingBooks = document.getElementsById("top-shelf");
-// console.log(topSellingBooks)
+
 
 openBtn.addEventListener("click", function () {
   modal.style.display = "block";
 });
-// We want the modal to close when the OK button is clicked
 closeBtn.addEventListener("click", function () {
   modal.style.display = "none";
 });
@@ -66,12 +64,11 @@ function topBookThumbnail(isbn) {
     })
     .then(function (data) {
       console.log(data);
-      //need to make isbn var so it matches with the ny times.
       var thumbnail = data.items[0].volumeInfo.imageLinks.thumbnail;
       console.log(thumbnail);
-      for (var i = 0; i < data.items.length; i++) {
+
         var img = document.createElement("img");
-        img.src = data.items[i].volumeInfo.imageLinks.thumbnail;
+        img.src = data.items[0].volumeInfo.imageLinks.thumbnail;
         document.getElementById("top-shelf1").appendChild(img);
         img.classList.add(
           "mx-auto",
@@ -82,35 +79,10 @@ function topBookThumbnail(isbn) {
           "border-2",
           "bg-slate-50"
         );
-        //   var frontPage = document.createElement('section');
-        //   var bookCover = document.createElement('img');
-        //   bookCover.classList.add('w-5/6', 'h-4/6');
-        //   bookCover.src = data.items[i].volumeInfo.imageLinks.thumbnail;
-        // console.log("image",frontPage);
-        // console.log("cover", bookCover)
-
-        // frontPage.append(bookCover);
-        // topSellingBooks.append(frontPage);
-        // if ( i < 3) {
-        //   var frontPage = document.createElement('section');
-        //   var bookCover = document.createElement('img');
-        //   bookCover.classList.add('w-5/6', 'h-4/6');
-        //   bookCover.src = data.items[i].volumeInfo.imageLinks.thumbnail;
-        // }
-      }
+      
     });
 }
 
-// fetch( nyUrl + nyApiKey)
-// .then(function (response) {
-//   return response.json();
-// })
-// .then(function (data){
-//     console.log(data);
-//     var isbn1= data.results[1].isbns[0].isbn10;
-//     topBookThumbnail1(isbn1)
-// console.log(isbn1)
-// })
 
 function topBookThumbnail1(isbn1) {
   console.log(isbn1);
@@ -124,33 +96,21 @@ function topBookThumbnail1(isbn1) {
       //need to make isbn var so it matches with the ny times.
       var thumbnail = data.items[0].volumeInfo.imageLinks.thumbnail;
       console.log(thumbnail);
-      for (var i = 0; i < data.items.length; i++) {
-        var img = document.createElement("img");
-        img.src = data.items[i].volumeInfo.imageLinks.thumbnail;
-        document.getElementById("top-shelf2").appendChild(img);
-        img.classList.add(
-          "mx-auto",
-          "px-4",
-          "w-80",
-          "h-auto",
-          "border-black",
-          "border-2",
-          "bg-slate-50"
-        );
-      }
+      // for (var i = 0; i < data.items.length; i++) {
+      var img = document.createElement("img");
+      img.src = data.items[0].volumeInfo.imageLinks.thumbnail;
+      document.getElementById("top-shelf2").appendChild(img);
+      img.classList.add(
+        "mx-auto",
+        "px-4",
+        "w-80",
+        "h-auto",
+        "border-black",
+        "border-2",
+        "bg-slate-50"
+      );
     });
 }
-
-// fetch( nyUrl + nyApiKey)
-// .then(function (response) {
-//   return response.json();
-// })
-// .then(function (data){
-//     console.log(data);
-//     var isbn2= data.results[2].isbns[0].isbn10;
-//     topBookThumbnail2(isbn2)
-// console.log(isbn2)
-// })
 
 function topBookThumbnail2(isbn2) {
   console.log(isbn2);
@@ -164,9 +124,9 @@ function topBookThumbnail2(isbn2) {
       //need to make isbn var so it matches with the ny times.
       var thumbnail = data.items[0].volumeInfo.imageLinks.thumbnail;
       console.log(thumbnail);
-      for (var i = 0; i < data.items.length; i++) {
+      // for (var i = 0; i < data.items.length; i++) {
         var img = document.createElement("img");
-        img.src = data.items[i].volumeInfo.imageLinks.thumbnail;
+        img.src = data.items[0].volumeInfo.imageLinks.thumbnail;
         document.getElementById("top-shelf3").appendChild(img);
         img.classList.add(
           "mx-auto",
@@ -177,6 +137,5 @@ function topBookThumbnail2(isbn2) {
           "border-2",
           "bg-slate-50"
         );
-      }
     });
 }
