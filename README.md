@@ -35,8 +35,8 @@ https://www.w3.org/
 
 ### github repository link & deployed page: 
 
-https://github.com/KaiDoll/shelfscan
-https://kaidoll.github.io/shelfscan/
+Project: https://github.com/KaiDoll/shelfscan
+Deployed Website: https://kaidoll.github.io/shelfscan/
 
 
 ## github contributers: 
