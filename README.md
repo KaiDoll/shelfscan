@@ -35,7 +35,8 @@ https://www.w3.org/
 
 ### github repository link & deployed page: 
 
-https://github.com/TheCraftyGrump/BootCamp-Project1
+https://github.com/KaiDoll/shelfscan
+https://kaidoll.github.io/shelfscan/
 
 placeholder
 
