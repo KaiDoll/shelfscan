@@ -38,7 +38,6 @@ https://www.w3.org/
 https://github.com/KaiDoll/shelfscan
 https://kaidoll.github.io/shelfscan/
 
-placeholder
 
 ## github contributers: 
 @KaiDoll
